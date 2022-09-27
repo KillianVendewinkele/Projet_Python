@@ -134,3 +134,9 @@ dmypy.json
 .env.test.local
 .env.production.local
 .env.local
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/Projet_Python.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/profiles_settings.xml
