@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-i_table = ["bite", "cul", "thomas"]
+i_table = ["Aie", "bobo", "thomas"]
 
 @app.get("/")
 async def root():
@@ -15,7 +15,7 @@ async def yolo():
 
 @app.get("/thomas")
 async def thomas():
-    return {"message": hello_bitch('Thomas', 20) }
+    return {"message": hello_sir('Thomas', 20) }
 
 @app.get("/insult")
 async def insult():
@@ -33,8 +33,8 @@ async def pageme():
 async def page(item_id):
     return {"Error 404": "Page " + item_id + " is not found"} 
 
-def hello_bitch(name : str, age: int):
-    sentence = "Hello " + name + ", beach of " + str(age) + " years old"
+def hello_sir(name : str, age: int):
+    sentence = "Hello " + name + ", pe of " + str(age) + " years old"
     return sentence
 
 def insults(insult_table : list[str]):
