@@ -1,5 +1,11 @@
 from fastapi import FastAPI
+from enum import Enum
 from typing import Tuple, Union, Optional
+
+class ModelName(str, Enum):
+    why = "why"
+    who = "who"
+    where = "where"
 
 app = FastAPI()
 
@@ -16,6 +22,28 @@ async def name():
 @app.get("/type")
 async def type():
     return process_items(["A", "B", "C"])
+
+@app.get("/items/{item_id}")
+async def read_user_item(
+    item_id: str, needy: str, skip: int = 0, limit: int | None = None
+):
+    item = {"item_id": item_id, "needy": needy, "skip": skip, "limit": limit}
+    return item
+
+
+@app.get("/items/{item_id}")
+async def read_item(item_id: int):
+    return {"item_id": item_id}
+
+@app.get("/models/{model_name}")
+async def get_model(model_name: ModelName):
+    if model_name is ModelName.why:
+        return {"model_name": model_name, "message": "Why have you searched this ?"}
+
+    if model_name.value == "who":
+        return {"model_name": model_name, "message": "Who are you for searching this ?"}
+
+    return {"model_name": model_name, "message": "..."}
 
 def name_with_age(name : str, age : int):
     name_with_age = name + " is this old : " + str(age)
