@@ -5,7 +5,8 @@ Projet python en groupe pour la semaine de framework back-end à la Coding Facto
 
 ## Développeurs:
 
+* Amed ADJE - Cergy
 * Antoine LE DIEU DE VILLE - Cergy
 * Killian VENDEWINKELE - Cergy
 * Martin HEURIPEAU - Cergy
-* Amed ADJE - Cergy
+
