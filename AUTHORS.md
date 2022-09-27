@@ -1,9 +1,9 @@
-Auteur du projet
+Project author
 ===============
 
-Projet python en groupe pour la semaine de framework back-end à la Coding Factory.
+Python team project for the back-end framework week at the Coding Factory.
 
-## Développeurs:
+## Developers:
 
 * Antoine LE DIEU DE VILLE - Cergy
 * Killian VENDEWINKELE - Cergy

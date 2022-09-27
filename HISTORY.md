@@ -1,5 +1,5 @@
-## Ajoutez vos updates ici
+## Add your updates here
 
 ## 0.1.0 (2022-09-26)
 
-* Première release
+* First release
