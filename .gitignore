@@ -140,4 +140,19 @@ dmypy.json
 .idea/modules.xml
 .idea/misc.xml
 .idea/inspectionProfiles/profiles_settings.xml
+<<<<<<< HEAD
 
+=======
+virtualenv/bin/python
+virtualenv/bin/python3
+virtualenv/bin/python3.10
+virtualenv/bin/pip3.10
+virtualenv/bin/pip3
+virtualenv/bin/pip
+virtualenv/bin/Activate.ps1
+virtualenv/bin/activate.csh
+virtualenv/bin/activate.fish
+virtualenv/bin/activate
+virtualenv/pyvenv.cfg
+notes.txt
+>>>>>>> c8b8d20 (Add pip.conf file and change the .gitignore)
