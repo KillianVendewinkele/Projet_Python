@@ -1,0 +1,11 @@
+{   "users" : [
+        {
+            "id_user" : "Abed",
+            "password" : "123JairacketAntoine"
+        },
+        {
+            "id_user" : "Martin",
+            "password" : "123Jefaissemblantdebosser"
+        }
+    ]
+}

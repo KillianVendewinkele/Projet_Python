@@ -140,3 +140,15 @@ dmypy.json
 .idea/modules.xml
 .idea/misc.xml
 .idea/inspectionProfiles/profiles_settings.xml
+notes.txt
+virtualenv/bin/python3.10
+virtualenv/bin/python3
+virtualenv/bin/python
+virtualenv/bin/pip3.10
+virtualenv/bin/pip3
+virtualenv/bin/pip
+virtualenv/bin/Activate.ps1
+virtualenv/bin/activate.fish
+virtualenv/bin/activate.csh
+virtualenv/pyvenv.cfg
+virtualenv/bin/activate
