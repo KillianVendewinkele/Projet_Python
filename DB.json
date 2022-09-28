@@ -7,5 +7,22 @@
             "id_user" : "Martin",
             "password" : "123Jefaissemblantdebosser"
         }
+    ],
+    "commands" : [
+        {   
+            "id_command" : "C1",
+            "id_user" : "Abed",
+            "content_command" : [
+                    {
+                        "id_products" : "",
+                        "quantity" : 3
+                    },
+                    {
+                        "id_products" : "",
+                        "quantity" : 3
+                    }
+            ]
+        }
+        
     ]
 }
