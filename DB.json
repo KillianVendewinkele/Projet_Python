@@ -27,10 +27,8 @@
     ],
     "carts" : {
         "id_cart" : "CAR1",
-        "id_user" : "",
+        "id_user" : "Abed",
         "cart_content" : [
-
-        
         {
             "id_products" : "1",
             "quantity" : 3
