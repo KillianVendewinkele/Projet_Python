@@ -1,16 +1,17 @@
 {   "users" : [
         {
             "id_user" : "Abed",
-            "password" : "123JairacketAntoine"
+            "password" : "123JrA"
         },
         {
             "id_user" : "Martin",
-            "password" : "123Jefaissemblantdebosser"
-        }
+            "password" : "123Jfsdb"
+        },
+
     ],
     "commands" : [
         {   
-            "id_command" : "C1",
+            "id_command" : "COM1",
             "id_user" : "Abed",
             "content_command" : [
                     {
@@ -23,6 +24,21 @@
                     }
             ]
         }
+    ],
+    "carts" : {
+        "id_cart" : "CAR1",
+        "id_user" : "",
+        "cart_content" : [
+
         
+        {
+            "id_products" : "1",
+            "quantity" : 3
+        },
+        {
+            "id_products" : "2",
+            "quantity" : 2
+        }
     ]
+    }
 }
