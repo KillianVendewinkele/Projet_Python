@@ -21,10 +21,6 @@ async def thomas():
 async def insult():
     return {"message": i_table }
 
-@app.get("/tuples")
-async def tuples():
-    return process_items( tuple[1, 3, "bite"])
-
 @app.get("/page/me")
 async def pageme():
     return {"message": "All good [200], the current user page"}
