@@ -1,0 +1,18 @@
+{"products": [
+    {
+        "category": "pharmacy",
+        "description": "This is a test to help you to know who is your dad/mum. That also works to know who is your son/daughter.",
+        "id_product": "PR1",
+        "price": 12,
+        "product": "Pa&ma-ternity test",
+        "stock": 5
+    },
+    {
+        "category": "pharmacy",
+        "description": "Take a tablet, everything will be correct.",
+        "id_product": "PR2",
+        "price": 12,
+        "product": "tablets",
+        "stock": 12
+    }
+]}

@@ -1,74 +1,84 @@
-{   "users" : [
-        {
-            "id_user" : "Abed",
-            "password" : "123JrA"
-        },
-        {
-            "id_user" : "Martin",
-            "password" : "123Jfsdb"
-        },
-        {
-            "id_user" : "Killian",
-            "password" : "123soleil"
-        },
-        {
-            "id_user" : "Antoine",
-            "password" : "123mdr"
-        },
-        {
-            "id_user" : "Mario",
-            "password" : "Mario"
-        },
-        {
-            "id_user" : "Luigi",
-            "password" : "Luigi"
-        }
-
-    ],
-    "commands" : [
-        {   
-            "id_command" : "COM1",
-            "id_user" : "Abed",
-            "content_command" : [
-                    {
-                        "id_products" : "",
-                        "quantity" : 3
-                    },
-                    {
-                        "id_products" : "",
-                        "quantity" : 3
-                    }
-            ]
-        }
-    ],
-    "carts" : {
-        "id_cart" : "CAR1",
-        "id_user" : "Abed",
-        "cart_content" : [
-        {
-            "id_products" : "PR1",
-            "quantity" : 3
-        },
-        {
-            "id_products" : "PR2",
-            "quantity" : 2
-        }
-    ]
+{
+    "carts": {
+        "cart_content": [
+            {
+                "id_products": "PR1",
+                "quantity": 3
+            },
+            {
+                "id_products": "PR2",
+                "quantity": 2
+            }
+        ],
+        "id_cart": "CAR1",
+        "id_user": "Abed"
     },
-    "products" : [
+    "commands": [
         {
-            "product" : "Pa&ma-ternity test",
-            "id_product" : "PR1",
-            "description" : "This is a test to help you to know who is your dad/mum. That also works to know who is your son/daughter.",
-            "price" : 12,
-            "category" : "pharmacy"
+            "content_command": [
+                {
+                    "id_products": "PR1",
+                    "quantity": 3
+                },
+                {
+                    "id_products": "PR2PR2",
+                    "quantity": 3
+                }
+            ],
+            "id_command": "COM1",
+            "id_user": "Abed"
+        }
+    ],
+    "products": [
+        {
+            "category": "pharmacy",
+            "description": "This is a test to help you to know who is your dad/mum. That also works to know who is your son/daughter.",
+            "id_product": "PR1",
+            "price": 12,
+            "product": "Pa&ma-ternity test",
+            "stock": 5
         },
         {
-            "product" : "tablets",
-            "id_product" : "PR2",
-            "description" : "Take a tablet, all will be correct.",
-            "price" : 12,
-            "category" : "pharmacy"
+            "category": "pharmacy",
+            "description": "Take a tablet, everything will be correct.",
+            "id_product": "PR2",
+            "price": 12,
+            "product": "tablets",
+            "stock": 12
+        }
+    ],
+    "users": [
+        {
+            "id_user": "Abed",
+            "password": "123JrA"
+        },
+        {
+            "id_user": "Martin",
+            "password": "123Jfsdb"
+        },
+        {
+            "id_user": "Killian",
+            "password": "123soleil"
+        },
+        {
+            "id_user": "Antoine",
+            "password": "123mortderigole"
+        },
+        {
+            "id_user": "Mario",
+            "password": "Mario"
+        },
+        {
+            "id_user": "Luigi",
+            "password": "Luigi"
+        },
+        {
+            "id_user": "Test",
+            "password": "123Test"
+        },
+        {
+            "id_user": "Johan",
+            "password": "password"
         }
     ]
 }

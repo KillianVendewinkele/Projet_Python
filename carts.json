@@ -1,0 +1,14 @@
+{"carts": {
+    "cart_content": [
+        {
+            "id_products": "PR1",
+            "quantity": 3
+        },
+        {
+            "id_products": "PR2",
+            "quantity": 2
+        }
+    ],
+    "id_cart": "CAR1",
+    "id_user": "Abed"
+}}
