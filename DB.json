@@ -6,7 +6,7 @@
         {
             "id_user" : "Martin",
             "password" : "123Jfsdb"
-        },
+        }
 
     ],
     "commands" : [
@@ -30,13 +30,29 @@
         "id_user" : "Abed",
         "cart_content" : [
         {
-            "id_products" : "1",
+            "id_products" : "PR1",
             "quantity" : 3
         },
         {
-            "id_products" : "2",
+            "id_products" : "PR2",
             "quantity" : 2
         }
     ]
-    }
+    },
+    "products" : [
+        {
+            "product" : "Pa&ma-ternity test",
+            "id_product" : "PR1",
+            "description" : "This is a test to help you to know who is your dad/mum. That also works to know who is your son/daughter.",
+            "price" : 12,
+            "category" : "pharmacy"
+        },
+        {
+            "product" : "tablets",
+            "id_product" : "PR2",
+            "description" : "Take a tablet, all will be correct.",
+            "price" : 12,
+            "category" : "pharmacy"
+        }
+    ]
 }
