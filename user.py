@@ -14,7 +14,7 @@ async def check_id_user(id_user : str):
     
     for i in range(db_json.users):
         if db_json.users.id_user[i] == id_user:
-            return {db_json.users.id_user[i]}
+            return {db_json.users[i].id_user}
         else:
             return id_user
 
@@ -25,3 +25,15 @@ async def register(id_user : str, password : str):
             return "User already taken"
         else:
             return {"id_user" : id_user, "password" : password}
+
+# Change password
+@app.patch("users/{id_user}/{password}")
+async def change_password(id_user : str, password : str):
+    file = open('db.json', 'w')
+    db_json = json.loads(file)
+    return db_json
+    for i in range(db_json.users):
+        if db_json.users[i].id_user == id_user:
+            file.write()
+
+    db_json.users.password = password
