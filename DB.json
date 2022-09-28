@@ -6,6 +6,22 @@
         {
             "id_user" : "Martin",
             "password" : "123Jfsdb"
+        },
+        {
+            "id_user" : "Killian",
+            "password" : "123soleil"
+        },
+        {
+            "id_user" : "Antoine",
+            "password" : "123mdr"
+        },
+        {
+            "id_user" : "Mario",
+            "password" : "Mario"
+        },
+        {
+            "id_user" : "Luigi",
+            "password" : "Luigi"
         }
 
     ],
