@@ -1,27 +1,38 @@
 {   "users" : [
         {
             "id_user" : "Abed",
-            "password" : "123JrA"
+            "password" : "123JrA",
+            "num_buy" : 287
         },
         {
             "id_user" : "Martin",
-            "password" : "123Jfsdb"
+            "password" : "123Jfsdb",
+            "num_buy" : 287,
+            "origin" : "deutsche"
         },
         {
             "id_user" : "Killian",
-            "password" : "123soleil"
+            "password" : "123soleil",
+            "num_buy" : 287,
+            "origin" : "deutsche"
         },
         {
             "id_user" : "Antoine",
-            "password" : "123mdr"
+            "password" : "123mdr",
+            "num_buy" : 287,
+            "origin" : "deutsche"
         },
         {
             "id_user" : "Mario",
-            "password" : "Mario"
+            "password" : "Mario",
+            "num_buy" : 287,
+            "origin" : "italie"
         },
         {
             "id_user" : "Luigi",
-            "password" : "Luigi"
+            "password" : "Luigi",
+            "num_buy" : 287,
+            "origin" : "deutsche"
         }
 
     ],
@@ -31,11 +42,11 @@
             "id_user" : "Abed",
             "content_command" : [
                     {
-                        "id_products" : "",
+                        "id_product" : "",
                         "quantity" : 3
                     },
                     {
-                        "id_products" : "",
+                        "id_product" : "",
                         "quantity" : 3
                     }
             ]
