@@ -16,6 +16,23 @@ async def register(id_user : str, password : str):
         else:
             return add_user_to_db(db_file_users, id_user, password)
 
+# Change password of the specified user
+@app.put("/users/{id_user}/{password}")
+async def change_password(id_user : str, password : str):
+    f = open(db_file_users, 'r')
+    db_json = json.load(f)
+    f.close()
+    f = open(db_file_users, 'w')
+    for i in range(0,len(db_json["users"])):
+        if db_json["users"][i]["id_user"] == id_user:
+            db_json["users"][i]["password"] = password
+            json.dump(db_json, f, sort_keys=True, indent = 4)
+            f.close()
+            return db_json["users"][i]
+    f.close()
+    return "The selected user doesn't exist"
+
+# Add the user to the json file
 def add_user_to_db(file_json : str, id : str , password : str):
     f = open(str(file_json), 'r+')
     db_json = json.load(f)
@@ -25,23 +42,9 @@ def add_user_to_db(file_json : str, id : str , password : str):
         })
     f.close()
     f = open(str(file_json), 'w')
-    json.dump(db_json, f, sort_keys=True, indent=4)
+    json.dump(db_json, f, sort_keys=True, indent = 4)
     f.close()
-    return str(id) + "ok"
-
-# Change password
-@app.patch("users/{id_user}/{password}")
-async def change_password(id_user : str, password : str):
-    file = open(db_file_users, 'w')
-    db_json = json.loads(file)
-    return db_json
-    for i in range(db_json.users):
-        if db_json.users[i].id_user == id_user:
-            file.write()
-
-    db_json.users.password = password
-
-
+    return str(id) + " ok"
 
 # Check the id_user for creating new account
 def check_id_user(id_user : str):
