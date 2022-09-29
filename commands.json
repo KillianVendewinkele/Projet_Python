@@ -1,0 +1,16 @@
+{"commands": [
+    {
+        "content_command": [
+            {
+                "id_products": "PR1",
+                "quantity": 3
+            },
+            {
+                "id_products": "PR2PR2",
+                "quantity": 3
+            }
+        ],
+        "id_command": "COM1",
+        "id_user": "Abed"
+    }
+]}
