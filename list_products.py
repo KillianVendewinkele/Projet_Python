@@ -13,3 +13,7 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
+
+# Recover db.json
+    with open('db.json') as file:
+        db_json = json.loads(file)
