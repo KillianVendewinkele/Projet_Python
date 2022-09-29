@@ -1,0 +1,44 @@
+{
+    "users": [
+        {
+            "id_user": "Abed",
+            "password": "123JrA"
+        },
+        {
+            "id_user": "Martin",
+            "password": "123Jfsdb"
+        },
+        {
+            "id_user": "Killian",
+            "password": "123soleil"
+        },
+        {
+            "id_user": "Antoine",
+            "password": "123mortderigole"
+        },
+        {
+            "id_user": "Mario",
+            "password": "Mario"
+        },
+        {
+            "id_user": "Luigi",
+            "password": "Luigi"
+        },
+        {
+            "id_user": "Test",
+            "password": "123Test"
+        },
+        {
+            "id_user": "Johan",
+            "password": "password"
+        },
+        {
+            "id_user": "Try",
+            "password": "hard"
+        },
+        {
+            "id_user": "Product",
+            "password": "notfake"
+        }
+    ]
+}
