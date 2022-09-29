@@ -19,6 +19,15 @@ user.py :
             
             This function returns "The selected user doesn't exist" if the id_user doesn't exist in the json file, else it returns informations on the selected users after updating the password.
 
+        -> login(id_user : str, password : str) :
+
+            This function check if the user exist in the json file. It takes two parameters :
+
+                -> id_user (string) : the selected user id to compare with the user id in the json file.
+                -> password (string) : the selected password to compare with the password of the user in the json file.
+
+            This function returns "You can enter" if the user id and the password exist in the json file, else it returns "Wrong username or password".
+
         -> add_user_to_db(file_json : str, id : str , password : str) :
 
             This function add a user in a json file. It takes three parameters :
@@ -35,4 +44,4 @@ user.py :
 
                 -> id_user (string) : the user you want to check with the json file.
 
-            This function returns the user id of the json file if it already exists, else it returns the string "You can create your account". 
+            This function returns the user id of the json file if it already exists, else it returns the string "You can create your account".

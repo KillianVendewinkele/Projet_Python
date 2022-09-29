@@ -11,6 +11,7 @@ db_file_products = "products.json"
 # Create the user
 @app.post("/users/{id_user}/{password}")
 async def register(id_user : str, password : str):
+
         if id_user == check_id_user(id_user):
             return "User already taken"
         else:
@@ -19,6 +20,8 @@ async def register(id_user : str, password : str):
 # Change password of the specified user
 @app.put("/users/{id_user}/{password}")
 async def change_password(id_user : str, password : str):
+
+     # Recover db.json
     f = open(db_file_users, 'r')
     db_json = json.load(f)
     f.close()
@@ -32,8 +35,20 @@ async def change_password(id_user : str, password : str):
     f.close()
     return "The selected user doesn't exist"
 
+@app.get("/users/{id_user}/{password}")
+async def login(id_user : str, password : str):
+
+    f = open(db_file_users, 'r')
+    files = f.read()
+    db_json = json.loads(files)
+    for i in range(0,len(db_json["users"])):
+        if db_json["users"][i]["id_user"] == id_user and db_json["users"][i]["password"] == password:
+            return "You can enter"
+    return "Wrong username or password"
+
 # Add the user to the json file
 def add_user_to_db(file_json : str, id : str , password : str):
+
     f = open(str(file_json), 'r+')
     db_json = json.load(f)
     db_json["users"].append({
@@ -49,13 +64,10 @@ def add_user_to_db(file_json : str, id : str , password : str):
 # Check the id_user for creating new account
 def check_id_user(id_user : str):
     
-    # Recover db.json
     f = open(db_file_users, 'r')
     files = f.read()
     db_json = json.loads(files)
     for i in range(0,len(db_json["users"])):
         if db_json["users"][i]["id_user"] == id_user:
             return db_json["users"][i]["id_user"]
-        else:
-            print(0)
     return "You can create your account"
