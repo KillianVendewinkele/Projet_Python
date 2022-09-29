@@ -1,3 +1,4 @@
+from unicodedata import category
 from fastapi import FastAPI
 import json
 
@@ -17,5 +18,10 @@ async def product_details(id_product : str):
     db_json = json.load(f)
     for i in range(0,len(db_json["products"])):
         if db_json["products"][i]["id_product"] == id_product:
-            return db_json["products"][i]["id_product"], db_json["products"][i]["price"], db_json["products"][i][""]
+            product = db_json["products"][i]["product"]
+            price = db_json["products"][i]["price"]
+            description = db_json["products"][i]["description"]
+            stock = db_json["products"][i]["stock"]
+            category = db_json["products"][i]["category"]
+            return product, price, description, stock, category
     return "The selected product doesn't exist"
