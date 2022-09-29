@@ -1,17 +1,6 @@
 # Projet_Python
 Projet python
 
-# db.json : 
-
-    >> users <<
-
-This is the table of users. 
-There is following elements inside :
-    - id_user           [STRING]    (ID :  Unique. This is the Nickname and the element of identification.)
-    - password          [STRING]    (Obvious, this is a password. No restrictions for it at the moment.)
-    - num_buy           [STRING]    (number of element that have been bought by the user. Basicaly used to know who is the best "client").
-    - origin            [STRING]    (location of the user, at the creation of his account without any caps) 
-
 # user.py : 
 
 
