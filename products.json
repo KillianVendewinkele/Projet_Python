@@ -5,7 +5,8 @@
         "id_product": "PR1",
         "price": 12,
         "product": "Pa&ma-ternity test",
-        "stock": 5
+        "stock": 5,
+        "best_product": false
     },
     {
         "category": "pharmacy",
@@ -13,6 +14,7 @@
         "id_product": "PR2",
         "price": 12,
         "product": "tablets",
-        "stock": 12
+        "stock": 18,
+        "best_product": true
     }
 ]}
