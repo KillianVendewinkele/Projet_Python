@@ -1,6 +1,35 @@
 # Projet_Python
 Projet python
 
+# page_product.py : 
+
+
+    >> product_details(id_product : str) <<
+
+This function recover almost every product details in the json file. It takes one parameter : 
+
+    - id_product  (string) : an unique value for retrieving the product in the json file.
+
+This function returns the product name, the product price, the product description, the product stock, the product category, the list of best product.
+
+    >> add_to_cart(id_user : str, id_product : str) :
+
+This function add a product to the cart. It takes two parameters :
+
+    - id_user (string) : an unique value to check if the cart exists.
+    - id_product (string) : an unique value of the selected value to add in the cart.
+
+This function returns 202 if the product is added to the cart, else it returns 404.
+
+    >> best_product(best_product : bool, db_json) <<
+
+This function recover every product that are best product and put them in a list. It takes two parameters : 
+
+    - best_product (boolean) : this value is true if the product is in best_product else this value is not in best_product.
+    - db_json (json) : this is the json you want to search for a best product.
+
+This function returns the list of best products if the list exists, else it returns "".
+
 # user.py : 
 
 
