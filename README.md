@@ -77,3 +77,21 @@ This function check if the id_user already exists in the json file. It takes one
     - id_user (string) : the user you want to check with the json file.
 
 This function returns the user id of the json file if it already exists, else it returns the string "You can create your account".
+
+list-products
+# list_products.py : 
+
+
+    >> read_products(category: str): <<
+ 
+This function create a user in the json file. It takes one parameter : 
+
+    - category (string) : an value for retrieving the category in the json file.
+
+This function Filter the products with category of the json file if it already exists, else it returns the string "The selected category doesn't exist".
+
+     >> read_list_products(): <<
+
+This function returns the products of the json file if it already exists, else it returns the string "The selected category doesn't exist".
+=======
+
