@@ -10,7 +10,7 @@ db_file_products = "products.json"
 
 
 @app.get("/products")
-async def read_products(limit: int = 3):
+async def read_list_products(limit: int = 1):
     f = open(db_file_products, 'r')
     files = f.read()
     db_json = json.loads(files)
@@ -35,5 +35,5 @@ async def read_products(category: str):
 
 # @app.get("/products/list")
 # async def read_products():
-# p roduct_list = list(db_file_products)
+# product_list = list(db_file_products)
 # return product_list
