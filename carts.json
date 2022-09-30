@@ -1,14 +1,32 @@
-{"carts": {
-    "cart_content": [
+{
+    "carts": [
         {
-            "id_products": "PR1",
-            "quantity": 3
+            "cart_content": [
+                {
+                    "id_products": "PR1",
+                    "quantity": 13
+                },
+                {
+                    "id_products": "PR2",
+                    "quantity": 2
+                }
+            ],
+            "id_cart": "CAR1",
+            "id_user": "Abed"
         },
         {
-            "id_products": "PR2",
-            "quantity": 2
+            "cart_content": [
+                {
+                    "id_products": "PR1",
+                    "quantity": 2
+                },
+                {
+                    "id_products": "PR2",
+                    "quantity": 12
+                }
+            ],
+            "id_cart": "CAR2",
+            "id_user": "Killian"
         }
-    ],
-    "id_cart": "CAR1",
-    "id_user": "Abed"
-}}
+    ]
+}
