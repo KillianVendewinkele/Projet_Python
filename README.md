@@ -12,6 +12,15 @@ This function recover almost every product details in the json file. It takes on
 
 This function returns the product name, the product price, the product description, the product stock, the product category, the list of best product.
 
+    >> add_to_cart(id_user : str, id_product : str) :
+
+This function add a product to the cart. It takes two parameters :
+
+    - id_user (string) : an unique value to check if the cart exists.
+    - id_product (string) : an unique value of the selected value to add in the cart.
+
+This function returns 202 if the product is added to the cart, else it returns 404.
+
     >> best_product(best_product : bool, db_json) <<
 
 This function recover every product that are best product and put them in a list. It takes two parameters : 

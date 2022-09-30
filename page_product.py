@@ -36,18 +36,16 @@ async def add_to_cart(id_user : str, id_product : str):
     product_found = ""
     f = open(db_file_carts, 'r')
     f_file = f.read()
-    db_json = json.load(f_file)
-    f_file.close()
+    db_json = json.loads(f_file)
+    f.close()
     g = open(db_file_products, 'r+')
     g_file = g.read()
-    db_json2 = json.load(g_file)
-    g_file.close()
+    db_json2 = json.loads(g_file)
+    g.close()
     for i in range(0,len(db_json["carts"])):
         if db_json["carts"][i]["id_user"] == id_user: # if the user already have a cart
             pass
         else : # if the user doesn't already have a cart
-            # create a cart for the user
-            print("bite")
         # check for each products in the cart if he already exist
         for k in range(0, len(db_json["carts"][i]["cart_content"])): 
             if str(id_product) == db_json["carts"][i]["cart_content"][k]["id_products"]:
@@ -75,6 +73,7 @@ async def add_to_cart(id_user : str, id_product : str):
     h = open(str(db_file_carts), 'w')
     json.dump(db_json, h, sort_keys=True, indent = 4)
     h.close()
+    return 200
         
 
     # Recover the right cart for 
