@@ -31,40 +31,69 @@ async def product_details(id_product : str):
         return product, price, description, stock, category, list_best_product
     return "The selected product doesn't exist"
 
-# @app.patch("/product/{id_product}/cart/{id_cart}")
-# async def add_to_cart(id_product : str, id_cart : str):
+@app.post("/cart/{id_user}/product/{id_product}")
+async def add_to_cart(id_user : str, id_product : str):
+    product_found = ""
+    f = open(db_file_carts, 'r')
+    f_file = f.read()
+    db_json = json.load(f_file)
+    f_file.close()
+    g = open(db_file_products, 'r+')
+    g_file = g.read()
+    db_json2 = json.load(g_file)
+    g_file.close()
+    for i in range(0,len(db_json["carts"])):
+        if db_json["carts"][i]["id_user"] == id_user: # if the user already have a cart
+            pass
+        else : # if the user doesn't already have a cart
+            # create a cart for the user
+            print("bite")
+        # check for each products in the cart if he already exist
+        for k in range(0, len(db_json["carts"][i]["cart_content"])): 
+            if str(id_product) == db_json["carts"][i]["cart_content"][k]["id_products"]:
+                product_found = "cart"
+        # check for each products if he exist in products database
+        for j in range(0, len(db_json2["products"])):
+            if product_found: break    
+            if (str(id_product) == db_json2["products"][j]["id_product"]):
+                product_found = "product"
+        # if the product exist in the cart:
+        if product_found == "cart": 
+            for j in range(0, len(db_json["carts"][i])):
+                if db_json["carts"][i]["cart_content"][j]["id_products"] == id_product:
+                    db_json["carts"][i]["cart_content"][j]["quantity"] += 1
+                    break
+        # if the product exist in the products database (but not in the cart)
+        elif product_found == "product":
+            for j in range(0, len(db_json["carts"][i])):
+                if db_json["carts"][i]["cart_content"][j]["id_products"] == id_product:
+                    db_json["carts"][i]["cart_content"][j]["quantity"] = 1
+                    break
+        else:
+            return 404
+        
+    h = open(str(db_file_carts), 'w')
+    json.dump(db_json, h, sort_keys=True, indent = 4)
+    h.close()
+        
 
-#     id = check_id_product(id_product)
-#     cart = check_id_cart(id_cart)
-#     if id == id_product and cart == id_cart:
-#         f = open(db_file_carts, "w")
-#         db_json = json.load(f)
-#         json.dump(db_json, f, sort_keys=True, indent = 4)
-#         db_json["carts"]["cart_content"].append()
-#         return f
-#     else:
-#         return "The product or the cart doesn't exist"
+    # Recover the right cart for 
+    # if id_user = user :
+    #   Recover the right product for 
+    #       If stock > 0 & cart[element] number < stock
+    #           If quantity > 0 
+    #               add 1 to the quantity in the cart (of the selected product <- user)
+    #           else
+    #           create a new product in cart_content
+    #       Else
+    #           return 404
+
+    
 
 def best_product(best_product : bool, db_json):
 
     if best_product == True:
         return db_json
     else:
-        return ""
+        return 404
 
-# def check_id_product(id_product):
-
-#     f = open(db_file_products, 'r')
-#     db_json = json.load(f)
-#     for i in range(0,len(db_json["products"])):
-#         if id_product == db_json["products"][i]["id_product"]:
-#             return id_product
-#     return ""
-
-# def check_id_cart(id_cart):
-
-#     f = open(db_file_carts, 'r')
-#     db_json = json.load(f)
-#     if id_cart == db_json["carts"]["id_cart"]:
-#         return id_cart
-#     return ""
