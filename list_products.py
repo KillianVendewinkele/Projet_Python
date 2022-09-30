@@ -13,8 +13,11 @@ db_file_products = "products.json"
 async def read_list_products(limit: int):
     f = open(db_file_products, 'r')
     files = f.read()
+    db_json_out = {}
     db_json = json.loads(files)
-    return db_json["limit": limit]
+    for i in range(1, limit +1):
+        db_json_out[i] = db_json["products"][i-1]
+    return db_json_out
 
 
 @app.get("/products/{category}")
