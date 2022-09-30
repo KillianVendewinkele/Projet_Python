@@ -1,5 +1,7 @@
+from posixpath import join
 from fastapi import FastAPI
 import json
+ 
 
 app = FastAPI()
 # db_file_* is used to set the same db for each function (easy to change)
@@ -21,7 +23,7 @@ async def register(id_user : str, password : str):
 @app.put("/users/{id_user}/{password}")
 async def change_password(id_user : str, password : str):
 
-     # Recover db.json
+    # Recover db.json
     f = open(db_file_users, 'r')
     db_json = json.load(f)
     f.close()
@@ -37,7 +39,6 @@ async def change_password(id_user : str, password : str):
 
 @app.get("/users/{id_user}/{password}")
 async def login(id_user : str, password : str):
-
     f = open(db_file_users, 'r')
     files = f.read()
     db_json = json.loads(files)
@@ -48,7 +49,6 @@ async def login(id_user : str, password : str):
 
 # Add the user to the json file
 def add_user_to_db(file_json : str, id : str , password : str):
-
     f = open(str(file_json), 'r+')
     db_json = json.load(f)
     db_json["users"].append({
