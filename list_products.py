@@ -8,18 +8,6 @@ db_file_commands = "commands.json"
 db_file_carts = "carts.json"
 db_file_products = "products.json"
 
-
-@app.get("/products")
-async def read_list_products(limit: int):
-    f = open(db_file_products, 'r')
-    files = f.read()
-    db_json_out = {}
-    db_json = json.loads(files)
-    for i in range(1, limit +1):
-        db_json_out[i] = db_json["products"][i-1]
-    return db_json_out
-
-
 @app.get("/products/{category}")
 async def read_products(category: str):
     # Recover db.json
@@ -34,7 +22,12 @@ async def read_products(category: str):
         return list_product
     return "The selected category doesn't exist"
 
-# @app.get("/products/list")
-# async def read_products():
-# product_list = list(db_file_products)
-# return product_list
+@app.get("/products")
+async def read_list_products(limit: int):
+    f = open(db_file_products, 'r')
+    files = f.read()
+    db_json_out = {}
+    db_json = json.loads(files)
+    for i in range(1, limit +1):
+        db_json_out[i] = db_json["products"][i-1]
+    return db_json_out
