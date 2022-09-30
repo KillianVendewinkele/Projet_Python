@@ -78,7 +78,6 @@ This function check if the id_user already exists in the json file. It takes one
 
 This function returns the user id of the json file if it already exists, else it returns the string "You can create your account".
 
-list-products
 # list_products.py : 
 
 
@@ -93,5 +92,4 @@ This function Filter the products with category of the json file if it already e
      >> read_list_products(): <<
 
 This function returns the products of the json file if it already exists, else it returns the string "The selected category doesn't exist".
-=======
 
